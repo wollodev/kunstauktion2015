@@ -16,7 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngTooltip',
+    'ui.bootstrap',
     'bootstrapLightbox'
   ])
   .config(function ($routeProvider) {

@@ -21,4 +21,11 @@ angular.module('kunstauktion2015App')
       'http://dummyimage.com/600x600/20b7ea/ffffff.png',
       'http://dummyimage.com/700x700/586163/ffffff.png'
     ];
+
+    $scope.linda = false;
+
+    $scope.showArtist = function () {
+      $scope.linda = !$scope.linda;
+    };
+
   });
