@@ -1,6 +1,7 @@
-/*global $:false */
-'use strict';
+(function(window, $) {'use strict';
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-});
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+})(window, window.jQuery);
