@@ -1,36 +1,35 @@
-<div class="row row-eq-height top50" ng-repeat="image in images">
+<div class="row row-eq-height top50" ng-repeat="masterpiece in masterpieces">
 
   <div class="col-xs-12 col-sm-6 col-md-8">
-    <a ng-click="Lightbox.openModal(images, $index)">
-      <img ng-src="{{image}}" class="img-responsive pull-right" style="border-radius: 2px;">
+    <a ng-click="Lightbox.openModal(masterpieces, $index)">
+      <img ng-src="images/masterpieces/{{masterpiece.gsx$bildklein.$t}}" class="img-responsive pull-right"
+           style="border-radius: 2px;">
     </a>
   </div>
 
   <div class="col-xs-6 col-md-4" style="min-height: 300px;">
-    <h3 style="margin: 10px 0 0 0">PEINTURE</h3>
-    <!--</div>-->
-    <!--<div class="col-xs-6 col-md-2">-->
-    <!--<img src="images/artists/miro_joan.jpg" class="img-responsive img-circle">-->
+    <h3 style="margin: 10px 0 0 0">{{masterpiece.gsx$bildname.$t }}
+      <small ng-if="masterpiece.gsx$bildjahr.$t">({{masterpiece.gsx$bildjahr.$t}})</small>
+    </h3>
 
-    <h6 ng-click="showArtist()" style="margin: 4px 0 0 0; cursor: pointer;">Joan Miró
-      <small>(France)</small>
+    <h6 ng-click="showArtist()" style="margin: 4px 0 0 0; cursor: pointer;">{{masterpiece.gsx$kuenstler.$t}}
+      <small ng-if="masterpiece.gsx$kuenstlerherkunft.$t">({{masterpiece.gsx$kuenstlerherkunft.$t}})</small>
     </h6>
 
-    <p ng-if="linda" class="animate-if small top10" style="color:#666666;">
-      Linda Hennemann - motivierende kreative Lehrerin - arbeitet nach dem Motto:
-      "Wenn wir beim Malen wieder spielen wie die Kinder und alles um uns herum vergessen, so ist das sehr gesund für Körper und Geist. Das Malen aus dem Unterbewussten macht den Menschen schöpferisch. Es erwärmt unser Herz und unsere Seele, baut Stress ab und setzt Selbstheilungskräfte in Gang."
+    <p ng-click="showArtist()" ng-if="linda" class="animate-if small top10" style="color:#666666; cursor: pointer;">
+      {{masterpiece.gsx$kuenstlerbeschreibung.$t}}
       <br><br>
-      <a target="blank" href="http://www.linda-dell-arte.de">linda-dell-arte.de</a>
+      <a target="blank" href="http://www.{{masterpiece.gsx$keunstlerwebsite.$t}}">{{masterpiece.gsx$keunstlerwebsite.$t}}</a>
     </p>
 
 
     <div class="bottom" style="margin-bottom: 30px;">
       <p class="info small">
-        100 x 80 cm<br>
-        Acryl auf Leinwand<br>
+        {{masterpiece.gsx$bildgroesse.$t}}<br>
+        {{masterpiece.gsx$bildtyp.$t}}<br>
         <br><br>
       </p>
-      <h6 class="info">550 &euro;</h6>
+      <h6 class="info">Nr. {{masterpiece.gsx$bildtyp.$t}} | {{masterpiece.gsx$bildpreis.$t}} &euro;</h6>
     </div>
 
   </div>

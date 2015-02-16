@@ -39,13 +39,14 @@ angular
 
     // our images array is not in the default format, so we have to write this
     // custom method
-    LightboxProvider.getImageUrl = function (imageUrl) {
-      return imageUrl;
+    LightboxProvider.getImageUrl = function (masterpiece) {
+      console.log(masterpiece);
+      return "images/masterpieces/" + masterpiece.gsx$bildgross.$t;
     };
 
     // set the caption of each image as its text color
-    LightboxProvider.getImageCaption = function (imageUrl) {
-      return '#' + imageUrl.match(/00\/(\w+)/)[1];
+    LightboxProvider.getImageCaption = function (masterpiece) {
+      return masterpiece;
     };
 
     //// increase the maximum display height of the image

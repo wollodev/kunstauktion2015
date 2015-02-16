@@ -9,12 +9,9 @@
 
   <!-- caption -->
   <div>
-    <h3 style="margin: 18px 0 0 0">PEINTURE</h3>
-    <!--</div>-->
-    <!--<div class="col-xs-6 col-md-2">-->
-    <!--<img src="images/artists/miro_joan.jpg" class="img-responsive img-circle">-->
-    <h6 style="margin: 4px 0 0 0">Joan Miró
-      <small>(France)</small>
+    <h3 style="margin: 18px 0 0 0">{{Lightbox.imageCaption.gsx$bildname.$t}} <small ng-if="Lightbox.imageCaption.gsx$bildjahr.$t">{{Lightbox.imageCaption.gsx$bildjahr.$t}}</small></h3>
+    <h6 style="margin: 4px 0 0 0">{{Lightbox.imageCaption.gsx$kuenstler.$t}}
+      <small ng-if="Lightbox.imageCaption.gsx$kuenstlerherkunft.$t">({{Lightbox.imageCaption.gsx$kuenstlerherkunft.$t}})</small>
     </h6>
   </div>
 
