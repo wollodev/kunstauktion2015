@@ -12,10 +12,9 @@ angular.module('kunstauktion2015App')
 
     $scope.Lightbox = Lightbox;
 
-    $scope.linda = false;
+    $scope.showArtist = function (masterpiece) {
 
-    $scope.showArtist = function () {
-      $scope.linda = !$scope.linda;
+      masterpiece.isShown = !masterpiece.isShown;
     };
 
     $scope.openLightboxModal = function (index) {
@@ -37,7 +36,9 @@ angular.module('kunstauktion2015App')
           $scope.masterpieces = [];
 
           for (var i = 0; i < $scope.summary.data.feed.entry.length; i++) {
-            $scope.masterpieces.push($scope.summary.data.feed.entry[i]);
+            var tmpMasterpiece = $scope.summary.data.feed.entry[i];
+            tmpMasterpiece.isShown = false;
+            $scope.masterpieces.push(tmpMasterpiece);
           }
           console.log($scope.masterpieces);
         },
@@ -49,24 +50,5 @@ angular.module('kunstauktion2015App')
     };
 
     $scope.getMasterpieces($scope.spreadsheet);
-
-    //
-    //$scope.masterpieces = [
-    //  {
-    //    'thumb': 'http://dummyimage.com/600x600/20b7ea/ffffff.png',
-    //    'image': 'http://dummyimage.com/600x600/20b7ea/ffffff.png',
-    //    'title': 'Dame am Abend',
-    //    'year': '',
-    //    'painter': 'Leonardo DaVinci',
-    //    'origin': 'Deutschland',
-    //    'size': '100x50 cm',
-    //    'type': 'Acryl auf Leinwand',
-    //    'id': '23-032',
-    //    'start_price': '450',
-    //    'painter_description':'Linda Hennemann - motivierende kreative Lehrerin - arbeitet nach dem Motto: Wenn wir beim Malen wieder spielen wie die Kinder und alles um uns herum vergessen, so ist das sehr gesund für Körper und Geist. Das Malen aus dem Unterbewussten macht den Menschen schöpferisch. Es erwärmt unser Herz und unsere Seele, baut Stress ab und setzt Selbstheilungskräfte in Gang.',
-    //    'painter_website':'linda-dell-arte.de'
-    //  }
-    //];
-
 
   });

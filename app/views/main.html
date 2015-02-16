@@ -1,29 +1,29 @@
 <div class="row row-eq-height top50" ng-repeat="masterpiece in masterpieces">
 
-  <div class="col-xs-12 col-sm-6 col-md-8">
+  <div class="col-xs-4 col-sm-6 col-md-6">
     <a ng-click="Lightbox.openModal(masterpieces, $index)">
       <img ng-src="images/masterpieces/{{masterpiece.gsx$bildklein.$t}}" class="img-responsive pull-right"
            style="border-radius: 2px;">
     </a>
   </div>
 
-  <div class="col-xs-6 col-md-4" style="min-height: 300px;">
+  <div class="col-xs-8 col-sm-6 col-md-6" style="min-height: 300px;">
     <h3 style="margin: 10px 0 0 0">{{masterpiece.gsx$bildname.$t }}
       <small ng-if="masterpiece.gsx$bildjahr.$t">({{masterpiece.gsx$bildjahr.$t}})</small>
     </h3>
 
-    <h6 ng-click="showArtist()" style="margin: 4px 0 0 0; cursor: pointer;">{{masterpiece.gsx$kuenstler.$t}}
+    <h6 ng-click="showArtist(masterpiece)" style="margin: 4px 0 0 0; cursor: pointer;">{{masterpiece.gsx$kuenstler.$t}}
       <small ng-if="masterpiece.gsx$kuenstlerherkunft.$t">({{masterpiece.gsx$kuenstlerherkunft.$t}})</small>
     </h6>
 
-    <p ng-click="showArtist()" ng-if="linda" class="animate-if small top10" style="color:#666666; cursor: pointer;">
+    <p ng-click="showArtist(masterpiece)" ng-if="masterpiece.isShown" class="animate-if small top10" style="color:#666666; cursor: pointer; padding-bottom: 100px;">
       {{masterpiece.gsx$kuenstlerbeschreibung.$t}}
       <br><br>
       <a target="blank" href="http://www.{{masterpiece.gsx$keunstlerwebsite.$t}}">{{masterpiece.gsx$keunstlerwebsite.$t}}</a>
     </p>
 
 
-    <div class="bottom" style="margin-bottom: 30px;">
+    <div class="bottom">
       <p class="info small">
         {{masterpiece.gsx$bildgroesse.$t}}<br>
         {{masterpiece.gsx$bildtyp.$t}}<br>

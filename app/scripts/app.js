@@ -25,10 +25,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
@@ -41,7 +37,7 @@ angular
     // custom method
     LightboxProvider.getImageUrl = function (masterpiece) {
       console.log(masterpiece);
-      return "images/masterpieces/" + masterpiece.gsx$bildgross.$t;
+      return 'images/masterpieces/' + masterpiece.gsx$bildgross.$t;
     };
 
     // set the caption of each image as its text color
