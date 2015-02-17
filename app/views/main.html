@@ -1,3 +1,62 @@
+<div class="row">
+  <img  src="images/logo.jpg" style="width: 220px;">
+  <h1 class="text-center">2. Aachener Benefiz-Kunstauktion</h1>
+</div>
+
+<div class="row top17">
+  <div class="col-sm-4 col-md-4">
+    <h4>Ausstellung<br>
+      <small>Sa, 25.04.2015 | 11 bis 19 Uhr
+        <br>
+        So, 26.04.2015 | 11 bis 13 Uhr
+      </small>
+    </h4>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <h4>Auktion<br>
+      <small>So, 26.04.2015 | ab 14 Uhr
+      </small>
+    </h4>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <h4>Ort<br>
+      <small>Aula Carolina<br>Pontstr. 7-9 | Aachen</small>
+    </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-s-10 col-md-10">
+    <hr>
+    <p>
+      Unser Ziel ist eine <em>"terre des hommes"</em>, eine Erde der Menschlichkeit.
+      <em>terre des hommes</em> fördert in 31 Projektländern mehr als 400 Partnerprojekte für notleidende Kinder.
+      <em>terre des hommes</em> hilft Straßenkindern, verlassenen und arbeitenden Kindern, kümmert sich um die Opfer von
+      Krieg
+      und Gewalt und sorgt für die Ausbildung von Kindern. <em>terre des hommes</em> unterstützt Jungen und Mädchen,
+      deren Familien
+      an Aids gestorben sind, setzt sich ein für die Bewahrung der biologischen und kulturellen Vielfalt und für den
+      Schutz diskriminierter Bevölkerungsgruppen.
+      <em>terre des hommes</em> schickt keine Entwicklungshelfer, sondern unterstützt einheimische Initiativen. Die
+      Projektpartner vor Ort bauen Schulen und Kinderschutzzentren und betreuen Kinder. Dabei richtet <em>terre des
+      hommes</em>
+      seine Arbeit konsequent an den Kinderrechten aus.<br><br>
+      <em>terre des hommes</em> unterstützt zum Beispiel das Projekt Lixeira in Mosambik
+    <h4 class="text-center to15">Lixeira – Hoffnung am Fuße des Müllbergs</h4>
+    Mitten in Mosambiks Hauptstadt Maputo liegt die riesige Müllkippe Lixeira. Rund 200 Kinder sammeln alles, was sich
+    noch verwerten lässt. Damit diese Kinder nicht dauerhaft von der Müllkippe abhängig sind, hat der Projektpartner
+    „Renascer" ein Zentrum eingerichtet, in dem die Kinder unterrichtet werden, handwerkliche Fertigkeiten erler- nen
+    können und eine warme Mahlzeit erhalten.
+    <br>
+    <h5 class="top15">Ute Wendt<br>
+      <small>terre des hommes, Arbeitsgruppe Aachen<br>
+        Mitglied des Präsidiums von terre des hommes Deutschland
+      </small>
+    </h5>
+    </p>
+  </div>
+</div>
+
 <div class="row row-eq-height top50" ng-repeat="masterpiece in masterpieces">
 
   <div class="col-xs-4 col-sm-6 col-md-6">
@@ -12,11 +71,16 @@
       <small ng-if="masterpiece.gsx$bildjahr.$t">({{masterpiece.gsx$bildjahr.$t}})</small>
     </h3>
 
-    <h6 ng-click="showArtist(masterpiece)" style="margin: 4px 0 0 0; cursor: pointer;">{{masterpiece.gsx$kuenstler.$t}}
+    <span class="h6" ng-click="showArtist(masterpiece)" style="margin: 4px 0 0 0; cursor: pointer;">{{masterpiece.gsx$kuenstler.$t}}
       <small ng-if="masterpiece.gsx$kuenstlerherkunft.$t">({{masterpiece.gsx$kuenstlerherkunft.$t}})</small>
-    </h6>
+    </span>
 
-    <p ng-click="showArtist(masterpiece)" ng-if="masterpiece.isShown" class="animate-if small top10" style="color:#666666; cursor: pointer; padding-bottom: 100px;">
+    <img ng-if="masterpiece.isShown" src="images/painter1.jpg" class="img-circle animate-if"
+         style="float:right;width: 80px; height: 80px; margin-top:10px;"><br>
+
+    <p ng-click="showArtist(masterpiece)" ng-if="masterpiece.isShown" class="animate-if small top10"
+       style="color:#666666; cursor: pointer; padding-bottom: 110px;">
+
       {{masterpiece.gsx$kuenstlerbeschreibung.$t}}
       <br><br>
       <a target="blank" href="http://www.{{masterpiece.gsx$kuenstlerwebsite.$t}}">{{masterpiece.gsx$kuenstlerwebsite.$t}}</a>
@@ -29,8 +93,7 @@
         {{masterpiece.gsx$bildtyp.$t}}<br>
         <br><br>
       </p>
-      <h6 class="info">Nr. {{masterpiece.gsx$bildtyp.$t}} | {{masterpiece.gsx$bildpreis.$t}} &euro;</h6>
+      <h6 class="info">Nr. {{masterpiece.gsx$bildnummer.$t}} | {{masterpiece.gsx$bildpreis.$t}} &euro;<br><br></h6>
     </div>
-
   </div>
 </div>
