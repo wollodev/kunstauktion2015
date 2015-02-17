@@ -5,6 +5,20 @@
   padding: 0.2em 0;
 }
 
+body {
+  padding: 0;
+}
+
+.info {
+  color: #666666;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  margin-right: 0;
+}
+
 
 .top5 { margin-top:5px; }
 .top7 { margin-top:7px; }
@@ -112,30 +126,15 @@
     padding-left: 0;
     padding-right: 0;
   }
-
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
 
-  body {
-    padding: 0;
-    background-image: url("../images/bg.jpg");
-    background-repeat: no-repeat;
-    /*background-attachment: fixed;*/
-    background-size: 400px 400px;;
-    background-position: right;
-    background-position-y: 300px;
-  }
 
-  .info {
-    color: #666666;
-  }
-
-  .bottom {
-    position: absolute;
-    bottom: 0;
-    margin-right: 0;
-  }
 
 }
