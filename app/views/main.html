@@ -1,5 +1,6 @@
 <div class="row">
-  <a href="http://www.tdh-aachen.de/" target="_blank"><img  src="images/logo.jpg" style="width: 220px;"></a>
+  <a href="http://www.tdh-aachen.de/" target="_blank"><img src="images/logo.jpg" style="width: 220px;"></a>
+
   <h1 class="text-center">2. Aachener Benefiz-Kunstauktion</h1>
 </div>
 
@@ -42,7 +43,7 @@
       hommes</em>
       seine Arbeit konsequent an den Kinderrechten aus.<br><br>
       <em>terre des hommes</em> unterstützt zum Beispiel das Projekt Lixeira in Mosambik
-    <h4 class="text-center to15">Lixeira – Hoffnung am Fuße des Müllbergs</h4>
+    <h4 class="text-center top15">Lixeira – Hoffnung am Fuße des Müllbergs</h4>
     Mitten in Mosambiks Hauptstadt Maputo liegt die riesige Müllkippe Lixeira. Rund 200 Kinder sammeln alles, was sich
     noch verwerten lässt. Damit diese Kinder nicht dauerhaft von der Müllkippe abhängig sind, hat der Projektpartner
     „Renascer" ein Zentrum eingerichtet, in dem die Kinder unterrichtet werden, handwerkliche Fertigkeiten erler- nen
@@ -76,11 +77,10 @@
     </span>
 
     <img ng-if="masterpiece.isShown" src="images/painter1.jpg" class="img-circle animate-if"
-         style="float:right;width: 80px; height: 80px; margin-top:10px;"><br>
+         style="float:right;width: 80px; height: 80px; margin-top:10px; margin-left: 8px;"><br>
 
-    <p ng-click="showArtist(masterpiece)" ng-if="masterpiece.isShown" class="animate-if small top10"
+    <p ng-click="showArtist(masterpiece)" ng-if="masterpiece.isShown" class="text-justify animate-if small top10"
        style="color:#666666; cursor: pointer; padding-bottom: 110px;">
-
       {{masterpiece.gsx$kuenstlerbeschreibung.$t}}
       <br><br>
       <a target="blank" href="http://www.{{masterpiece.gsx$kuenstlerwebsite.$t}}">{{masterpiece.gsx$kuenstlerwebsite.$t}}</a>
