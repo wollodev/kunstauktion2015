@@ -1,4 +1,5 @@
 # kunstauktion2015
+#####lightweight charity art auction website
 
 It's a basic generated (yo) angular website with bootstrap and grunt. For ease of use, the content is integrated via a google docs spreadsheet (lightweight cms). 
 
